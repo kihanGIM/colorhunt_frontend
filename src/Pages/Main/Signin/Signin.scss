@@ -10,22 +10,25 @@
 
 
     .logoBox {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
+
+      .text {
 
 
-      .paraGraph {
-        margin: 0px;
+
+        .paraGraph {
+          margin: 0px;
+        }
+
+        .textLine {}
+
       }
-
-      .textLine {}
-
-      .textLine {}
 
       .leftLogo {
         border: 1px solid #ffffff;
-        width: 500px;
-        height: 400px;
+        width: 650px;
+        // height: 400px;
 
         .logoAnimation {
           width: 200px;
@@ -50,7 +53,7 @@
       .loginLogo {
         font-size: 38px;
 
-        .logo {
+        .logoAnimation {
           width: 34px;
           height: 30px;
           padding-left: 5px;
@@ -80,8 +83,22 @@
 
         .checkBox {
           margin-top: 25px;
+          display: flex;
 
-          .keepLogin {}
+          .radioButton {
+            width: 20px;
+            height: 21px;
+            background-image: url("../../../Images/ico_account.png");
+            background-position: -30px -29px;
+            background-size: 200px 220px;
+            padding-right: 10px;
+
+          }
+
+
+          .keepLogin {
+            font-size: 15px;
+          }
         }
 
         .loginButton {
@@ -92,7 +109,7 @@
           background-color: #ffe500;
           margin-top: 40px;
           font-size: 15px;
-          font-weight: bold;
+
 
         }
       }
