@@ -26,15 +26,15 @@ class Create extends Component {
         <div className="center">
           <h1
             //{colorChange ? "black":"red"}
-            className={this.state.colorChange ? "black title" : "red title"}
+            className={`title ${this.state.colorChange ? "black" : "red"}`}
           >
             Create a Color Palette!
           </h1>
           <div className="box">
-            <input type="color" className="holder box_1" />
-            <input type="color" className="holder box_2" />
-            <input type="color" className="holder box_3" />
-            <input type="color" className="holder box_4" />
+            <input type="color" className="holder box_1" value="#aaaaaa" />
+            <input type="color" className="holder box_2" value="#bbbbbb" />
+            <input type="color" className="holder box_3" value="#cccccc" />
+            <input type="color" className="holder box_4" value="#dddddd" />
           </div>
           <button className="buttonup" onClick={this.handleClick}>
             Done
