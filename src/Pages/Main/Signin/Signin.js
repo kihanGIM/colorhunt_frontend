@@ -43,6 +43,7 @@ class Signin extends React.Component {
                   type="video/mov"
                   autoPlay
                   loop
+                  muted
                 ></video>
                 {/* <img
                 className="logo"
