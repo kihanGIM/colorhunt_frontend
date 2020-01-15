@@ -1,3 +1,6 @@
+*a {
+  text-decoration: none;
+}
 .header {
   width: 100%;
   margin: 0 auto;
@@ -23,13 +26,16 @@
     .logo {
       padding: 0 18px 0 160px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 20px;
       text-decoration: none;
       color: #000000;
       line-height: 50px;
+      a {
+        text-decoration: none;
+      }
     }
     .createtext {
-      font-size: 12px;
+      font-size: 14px;
       cursor: pointer;
       text-decoration: none;
       color: #000000;

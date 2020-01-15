@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../Images/color-hunt-palettes-logo.png";
-import "./../Header/Header.scss";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -21,13 +21,17 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header_left">
-          <a href="https://colorhunt.co/" className="logo">
-            Color Hunt
-            <img className="hat" src={logo} alt="logo" />
-          </a>
-          <a href="https://colorhunt.co/create" className="createtext">
-            Create
-          </a>
+          <Link style={{ textDecoration: "none", color: "white" }} to="/">
+            <a href="https://colorhunt.co/" className="logo">
+              Color Hunt
+              <img className="hat" src={logo} alt="logo" />
+            </a>
+          </Link>
+          <Link style={{ textDecoration: "none", color: "white" }} to="/create">
+            <a href="https://colorhunt.co/create" className="createtext">
+              Create
+            </a>
+          </Link>
         </div>
         <div className="dot" onClick={this.dothandleClick}>
           …
@@ -35,9 +39,14 @@ class Header extends Component {
             <a href="https://colorhunt.co/palettes" className="palettes">
               Palettes
             </a>
-            <a href="https://colorhunt.co/create" className="create">
-              Create
-            </a>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/create"
+            >
+              <a href="https://colorhunt.co/create" className="create">
+                Create
+              </a>
+            </Link>
             <a href="https://colorhunt.co/likes" className="Likes">
               Likes
             </a>
