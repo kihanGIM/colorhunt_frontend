@@ -1,6 +1,5 @@
 import React from "react";
 import "./ColorCard.scss";
-// import Header from "../../Component/Header/Header";
 
 class ColorCard extends React.Component {
   render() {

@@ -47,7 +47,7 @@ class Main extends React.Component {
         three: "#fae3d9",
         four: "#ffb6b9",
         likesNum: 390,
-        date: "8ays ago"
+        date: "8days ago"
       },
 
       {
