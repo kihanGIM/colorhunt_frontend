@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import logo from "../../Images/color-hunt-palettes-logo.png";
-//import Threedot from "../../Images/Threedot.png";
 import "./../Header/Header.scss";
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dot: true
+      dot: false
     };
   }
 
@@ -17,13 +16,6 @@ class Header extends Component {
     });
     console.log(this.state.dot);
   };
-
-  // handleClick = () => {
-  //   this.setState({
-  //     dot: !this.state.dot
-  //   });
-  //   console.log(this.state.dot);
-  // };
 
   render() {
     return (
@@ -38,7 +30,7 @@ class Header extends Component {
           </a>
         </div>
         <div className="dot" onClick={this.dothandleClick}>
-          …{/* <img className="dotmenu" src={Threedot} alt="Threedot" /> */}
+          …
           <div className={this.state.dot ? "dot_on" : "dot_off"}>
             <a href="https://colorhunt.co/palettes" className="palettes">
               Palettes
