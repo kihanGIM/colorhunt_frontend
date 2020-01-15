@@ -37,6 +37,7 @@ class ColorCard extends React.Component {
               className="heart"
               alt="Heart"
               src={
+                // "https://colorhunt.co/img/color-hunt-palettes-icon-heart-blue.png"
                 "https://colorhunt.co/img/color-hunt-palettes-icon-heart.png"
               }
             />
