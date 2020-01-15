@@ -4,6 +4,13 @@ import "./Main.scss";
 import Header from "../../Component/Header/Header";
 
 class Main extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isClicked: true
+    };
+  }
+
   render() {
     let colorCardData = [
       {
@@ -69,6 +76,7 @@ class Main extends React.Component {
           color4={card.four}
           likesNum={card.likesNum}
           date={card.date}
+          isClicked={this.state.isClicked}
         />
       );
     });

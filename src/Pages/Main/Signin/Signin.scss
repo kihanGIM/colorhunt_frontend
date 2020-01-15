@@ -1,5 +1,5 @@
 .Signin {
-  padding: 59px 69px;
+  padding: 100px 69px;
 
   .container {
     width: 1142px;
@@ -19,9 +19,16 @@
 
         .paraGraph {
           margin: 0px;
+          text-align: center;
+          font-size: 30px;
+
         }
 
-        .textLine {}
+        .textLine {
+          text-align: center;
+          font-size: 16px;
+          padding: 10px 0 10px 0;
+        }
 
       }
 
