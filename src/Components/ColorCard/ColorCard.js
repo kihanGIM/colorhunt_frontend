@@ -6,17 +6,29 @@ class ColorCard extends React.Component {
     return (
       <div className="ColorCard">
         <div className="colorList">
-          <div className="color no4">
-            <span className="rgbName">#ff8364</span>
+          <div
+            className="color no4"
+            style={{ backgroundColor: this.props.color1 }}
+          >
+            <span className="rgbName">{this.props.color1}</span>
           </div>
-          <div className="color no3">
-            <span className="rgbName">#ffb677</span>
+          <div
+            className="color no3"
+            style={{ backgroundColor: this.props.color2 }}
+          >
+            <span className="rgbName">{this.props.color2}</span>
           </div>
-          <div className="color no2">
-            <span className="rgbName">#5f6caf</span>
+          <div
+            className="color no2"
+            style={{ backgroundColor: this.props.color3 }}
+          >
+            <span className="rgbName">{this.props.color3}</span>
           </div>
-          <div className="color no1">
-            <span className="rgbName">#edf7fa</span>
+          <div
+            className="color no1"
+            style={{ backgroundColor: this.props.color4 }}
+          >
+            <span className="rgbName">{this.props.color4}</span>
           </div>
         </div>
         <div className="cardBottom">
@@ -28,9 +40,9 @@ class ColorCard extends React.Component {
                 "https://colorhunt.co/img/color-hunt-palettes-icon-heart.png"
               }
             />
-            <span>26</span>
+            <span className="likesNum">{this.props.likesNum}</span>
           </button>
-          <div className="date">today</div>
+          <div className="date">{this.props.date}</div>
         </div>
       </div>
     );

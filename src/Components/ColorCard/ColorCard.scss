@@ -5,6 +5,7 @@
   padding: 15px;
   border-radius: 6px;
   box-sizing: border-box;
+  padding-bottom: 50px;
 
   .colorList {
     width: 230px;
@@ -16,6 +17,7 @@
       display: flex;
       align-items: flex-end;
 
+
       .rgbName {
         border: 1px solid darkgray;
         border-top-right-radius: 3px;
@@ -24,15 +26,17 @@
         color: #ffffff;
         opacity: 1;
         text-transform: uppercase;
-
+        display: none;
       }
+
+
     }
 
     .no4 {
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgb(255, 131, 100);
+      // background-color: rgb(255, 131, 100);
       // padding-bottom: 100%;
       height: 230px;
       border-radius: 20px 20px 4px 4px;
@@ -42,7 +46,7 @@
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgb(255, 182, 119);
+      // background-color: rgb(255, 182, 119);
       // padding-bottom: 85%;
       height: 195.5px;
       border-radius: 4px 4px 0 0;
@@ -52,7 +56,7 @@
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgb(95, 108, 175);
+      // background-color: rgb(95, 108, 175);
       // padding-bottom: 67%;
       height: 154.09px;
       border-radius: 4px 4px 0 0;
@@ -62,7 +66,7 @@
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgb(237, 247, 250);
+      // background-color: rgb(237, 247, 250);
       // padding-bottom: 41%;
       height: 94.3px;
       border-radius: 4px 4px 0 0;
@@ -87,6 +91,8 @@
 
       &:hover {
         background-color: lightgrey;
+
+
       }
 
       .heart {

@@ -12,7 +12,13 @@
     .cardsContainer {
       width: 840px;
       margin: 0 auto;
-      background-color: #fcfcfd;
+      // background-color: #fcfcfd;
+      background-color: #222222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+
     }
   }
 }
