@@ -31,10 +31,10 @@ class Create extends Component {
             Create a Color Palette!
           </h1>
           <div className="box">
-            <input type="color" className="holder box_1" value="#aaaaaa" />
-            <input type="color" className="holder box_2" value="#bbbbbb" />
-            <input type="color" className="holder box_3" value="#cccccc" />
-            <input type="color" className="holder box_4" value="#dddddd" />
+            <input type="color" className="first" value="#aaaaaa" />
+            <input type="color" className="second" value="#bbbbbb" />
+            <input type="color" className="third" value="#cccccc" />
+            <input type="color" className="fourth" value="#dddddd" />
           </div>
           <button className="buttonup" onClick={this.handleClick}>
             Done
