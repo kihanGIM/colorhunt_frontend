@@ -18,7 +18,15 @@ class Header extends Component {
     console.log(this.state.dot);
   };
 
-  pagemove = () => {
+  pagemove_signin = () => {
+    this.props.history.push("/signin");
+  };
+
+  pagemove_main = () => {
+    this.props.history.push("/");
+  };
+
+  pagemove_create = () => {
     this.props.history.push("/create");
   };
 
@@ -26,17 +34,30 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header_left">
-          <Link style={{ textDecoration: "none", color: "white" }} to="/">
+          <div className="hat" onClick={this.pagemove_signin}>
+            <img className="hat" src={logo} alt="logo" />
+          </div>
+
+          <div className="logo" onClick={this.pagemove_main}>
+            Color Hunt
+          </div>
+
+          {/* <Link style={{ textDecoration: "none", color: "white" }} to="/">
             <a href="https://colorhunt.co/" className="logo">
               Color Hunt
               <img className="hat" src={logo} alt="logo" />
             </a>
-          </Link>
-          <Link style={{ textDecoration: "none", color: "white" }} to="/create">
+          </Link> */}
+
+          <div className="createtext" onClick={this.pagemove_create}>
+            create
+          </div>
+
+          {/* <Link style={{ textDecoration: "none", color: "white" }} to="/create">
             <a href="https://colorhunt.co/create" className="createtext">
               Create
             </a>
-          </Link>
+          </Link> */}
         </div>
         <div className="dot" onClick={this.dothandleClick}>
           …
@@ -44,7 +65,7 @@ class Header extends Component {
             <a href="https://colorhunt.co/palettes" className="palettes">
               Palettes
             </a>
-            <div className="create" onClick={this.pagemove}>
+            <div className="create" onClick={this.pagemove_create}>
               create
             </div>
             <a href="https://colorhunt.co/likes" className="Likes">
