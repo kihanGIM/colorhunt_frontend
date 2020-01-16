@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Header from "../../Component/Header/Header";
 import "./Create.scss";
 import "./../../Component/Header/Header.scss";
+import Main from "./../Main/Main";
 
 class Create extends Component {
   constructor(props) {
@@ -24,10 +25,7 @@ class Create extends Component {
       <div className="create">
         <Header />
         <div className="center">
-          <h1
-            //{colorChange ? "black":"red"}
-            className={`title ${this.state.colorChange ? "black" : "red"}`}
-          >
+          <h1 className={`title ${this.state.colorChange ? "black" : "red"}`}>
             Create a Color Palette!
           </h1>
           <div className="box">
@@ -40,6 +38,8 @@ class Create extends Component {
             Done
           </button>
         </div>
+
+        <Main />
       </div>
     );
   }
