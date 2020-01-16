@@ -23,18 +23,18 @@ class Signin extends React.Component {
           <div className="container">
             <div className="logoBox">
               <div className="text">
-                <h2 className="paraGraph">
+                <div className="paraGraph">
                   Color Hunt에 오신 것을 환영합니다.
-                </h2>
-                <h4 className="textLine">
+                </div>
+                <div className="textLine">
                   Color Hunt 하나로 충분합니다.
                   <br />
                   {/* <h4 className="textLine"> */}
-                  원하는 색들을 조합해서 저장하시고,
+                  원하는 색들을 조합해서 저장하고,
                   <br />
-                  SNS에 share해주세요!
+                  SNS에 공유해주세요!
                   {/* </h4> */}
-                </h4>
+                </div>
               </div>
               <div className="leftLogo">
                 <video
@@ -43,6 +43,7 @@ class Signin extends React.Component {
                   type="video/mov"
                   autoPlay
                   loop
+                  muted
                 ></video>
                 {/* <img
                 className="logo"
@@ -68,7 +69,6 @@ class Signin extends React.Component {
                     type="name"
                     placeholder="카카오계정(이메일 또는 전호번호)"
                   />
-                  <span> Color Hunt</span>
                 </div>
 
                 <div className="Field">

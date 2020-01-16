@@ -2,7 +2,20 @@ import React from "react";
 import "./ColorCard.scss";
 
 class ColorCard extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      clicked: true,
+      change: true
+    };
+  }
+
   render() {
+    const blueHeart =
+      "https://colorhunt.co/img/color-hunt-palettes-icon-heart-blue.png";
+    const redHeart =
+      "https://colorhunt.co/img/color-hunt-palettes-icon-heart.png";
+
     return (
       <div className="ColorCard">
         <div className="colorList">
@@ -36,14 +49,13 @@ class ColorCard extends React.Component {
             <img
               className="heart"
               alt="Heart"
-              src={
-                // "https://colorhunt.co/img/color-hunt-palettes-icon-heart-blue.png"
-                "https://colorhunt.co/img/color-hunt-palettes-icon-heart.png"
-              }
+              src={this.props.isClicked ? redHeart : blueHeart}
             />
             <span className="likesNum">{this.props.likesNum}</span>
           </button>
-          <div className="date">{this.props.date}</div>
+          <div className={this.state.change ? "date" : "dateNope"}>
+            {this.props.date}
+          </div>
         </div>
       </div>
     );
