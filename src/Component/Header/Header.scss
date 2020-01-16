@@ -2,15 +2,17 @@
   width: 100%;
   margin: 0 auto;
   height: 50px;
-
   position: fixed;
   background-color: white;
   display: flex;
   justify-content: space-between;
   font-family: rubik, arial;
   box-shadow: 0 5px 10px 0 rgba(0, 64, 128, 0.05);
+  z-index: 2;
+
   .header_left {
     display: flex;
+
     .hat {
       width: 28px;
       position: absolute;
@@ -20,6 +22,7 @@
       cursor: pointer;
       padding: 0 4px 0 110px;
     }
+
     .logo {
       padding: 0 18px 0 160px;
       cursor: pointer;
@@ -28,6 +31,7 @@
       color: #000000;
       line-height: 50px;
     }
+
     .createtext {
       font-size: 12px;
       cursor: pointer;
@@ -37,6 +41,7 @@
       line-height: 50px;
     }
   }
+
   .dot {
     cursor: pointer;
     font-size: 34px;
@@ -60,6 +65,7 @@
       position: fixed;
       right: 100px;
       margin-top: 10px;
+
       .palettes {
         text-align: left;
         display: block;
@@ -85,6 +91,7 @@
         color: #000;
         text-decoration: none;
       }
+
       .Likes {
         text-align: left;
         display: block;
@@ -97,6 +104,7 @@
         color: #000;
         text-decoration: none;
       }
+
       .About {
         text-align: left;
         display: block;
@@ -110,6 +118,7 @@
         text-decoration: none;
         border-top: gray;
       }
+
       .Instargram {
         text-align: left;
         display: block;
@@ -123,9 +132,11 @@
         text-decoration: none;
       }
     }
+
     .dot_off {
       display: none;
     }
+
     .dotmenu {
       color: #bccddf;
       font-size: 24px;
