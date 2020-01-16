@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "../../Images/color-hunt-palettes-logo.png";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -15,6 +16,10 @@ class Header extends Component {
       dot: !this.state.dot
     });
     console.log(this.state.dot);
+  };
+
+  pagemove = () => {
+    this.props.history.push("/create");
   };
 
   render() {
@@ -39,14 +44,9 @@ class Header extends Component {
             <a href="https://colorhunt.co/palettes" className="palettes">
               Palettes
             </a>
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/create"
-            >
-              <a href="https://colorhunt.co/create" className="create">
-                Create
-              </a>
-            </Link>
+            <div className="create" onClick={this.pagemove}>
+              create
+            </div>
             <a href="https://colorhunt.co/likes" className="Likes">
               Likes
             </a>
@@ -66,4 +66,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
