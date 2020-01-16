@@ -38,7 +38,6 @@ class Create extends Component {
             Done
           </button>
         </div>
-
         <Main />
       </div>
     );
