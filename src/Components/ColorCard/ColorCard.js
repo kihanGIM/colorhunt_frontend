@@ -1,21 +1,29 @@
 import React from "react";
 import "./ColorCard.scss";
-
 class ColorCard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      clicked: true,
-      change: true
+      clicked: this.props.isClicked,
+      number: this.props.likesNum
     };
   }
-
+  changeImg = e => {
+    // console.dir(e.target);
+    this.setState({
+      clicked: !this.state.clicked,
+      number: this.state.clicked
+        ? parseInt(e.target.innerText) - 1
+        : parseInt(e.target.innerText) + 1
+    });
+  };
   render() {
+    console.log("ddd", this.state.number);
+    console.log(this.props.likesNum);
     const blueHeart =
       "https://colorhunt.co/img/color-hunt-palettes-icon-heart-blue.png";
     const redHeart =
       "https://colorhunt.co/img/color-hunt-palettes-icon-heart.png";
-
     return (
       <div className="ColorCard">
         <div className="colorList">
@@ -44,18 +52,16 @@ class ColorCard extends React.Component {
             <span className="rgbName">{this.props.color4}</span>
           </div>
         </div>
-        <div className="cardBottom">
+        <div className="cardBottom" onClick={this.changeImg}>
           <button className="likes">
             <img
               className="heart"
               alt="Heart"
-              src={this.props.isClicked ? redHeart : blueHeart}
+              src={this.state.clicked ? redHeart : blueHeart}
             />
-            <span className="likesNum">{this.props.likesNum}</span>
+            <span className="likesNum">{this.state.number}</span>
           </button>
-          <div className={this.state.change ? "date" : "dateNope"}>
-            {this.props.date}
-          </div>
+          <div className="date">{this.props.date}</div>
         </div>
       </div>
     );
