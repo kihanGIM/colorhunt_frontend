@@ -2,23 +2,46 @@ import React from "react";
 import "./Signin.scss";
 import Header from "../../Component/Header/Header";
 import video from "../../Videos/CHI.mov";
-// import image from "../../../Images/ico_account.png";
+import { withRouter } from "react-router-dom";
 
 class Signin extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {
+    email: "",
+    password: ""
+  };
+
+  handleEmail = e => {
+    console.log(e.target.value);
+    this.setState({
+      email: e.target.value
+    });
+  };
+
+  handlePassword = e => {
+    console.log(e.target.value);
+    this.setState({
+      password: e.target.value
+    });
+  };
+
+  errorCheck = () => {
+    this.state.email.length > 5
+      ? alert("Welcome Color Hunt")
+      : alert("5글자 이상 입력해주세요");
+    return;
+  };
+
+  handleSignin = e => {
+    this.errorCheck();
+    this.props.history.push("/");
+  };
+
   render() {
+    console.log(this.state.email);
     return (
       <div>
         <Header />
-        {/* <div className="signin_container"></div>
-              <div className="loginLogo">
-                <img
-                  className="logo"
-                  alt="colorHunt_logo"
-                  src="https://colorhunt.co/img/color-hunt-palettes-logo.png" */}
+
         <div className="Signin">
           <div className="container">
             <div className="logoBox">
@@ -29,11 +52,9 @@ class Signin extends React.Component {
                 <div className="textLine">
                   Color Hunt 하나로 충분합니다.
                   <br />
-                  {/* <h4 className="textLine"> */}
                   원하는 색들을 조합해서 저장하고,
                   <br />
                   SNS에 공유해주세요!
-                  {/* </h4> */}
                 </div>
               </div>
               <div className="leftLogo">
@@ -45,11 +66,6 @@ class Signin extends React.Component {
                   loop
                   muted
                 ></video>
-                {/* <img
-                className="logo"
-                alt="colorHunt_logo"
-                src="https://colorhunt.co/img/color-hunt-palettes-logo.png"
-              /> */}
               </div>
             </div>
             <div className="signin_container">
@@ -65,14 +81,16 @@ class Signin extends React.Component {
               <div className="signinMain">
                 <div className="Field">
                   <input
+                    onChange={this.handleEmail}
                     className="noBorder"
-                    type="name"
+                    type="text"
                     placeholder="카카오계정(이메일 또는 전호번호)"
+                    size="1"
                   />
                 </div>
-
                 <div className="Field">
                   <input
+                    onChange={this.handlePassword}
                     className="noBorder"
                     type="password"
                     placeholder="비밀번호"
@@ -82,7 +100,13 @@ class Signin extends React.Component {
                   <div className="radioButton"></div>
                   <span className="keepLogin">로그인 상태 유지</span>
                 </div>
-                <button className="loginButton">로그인</button>
+                <button
+                  onClick={this.handleSignin}
+                  className="loginButton"
+                  type="submit"
+                >
+                  로그인
+                </button>
               </div>
               <div className="signinBottom">
                 <div className="signup">회원가입</div>
@@ -98,4 +122,4 @@ class Signin extends React.Component {
     );
   }
 }
-export default Signin;
+export default withRouter(Signin);
