@@ -32,7 +32,7 @@ class Create extends Component {
             <input type="color" className="first" value="#aaaaaa" />
             <input type="color" className="second" value="#bbbbbb" />
             <input type="color" className="third" value="#cccccc" />
-            <input type="color" className="fourth" value="#dddddd" />
+            <input type="color" className="fourth" value="#009900" />
           </div>
           <button className="buttonup" onClick={this.handleClick}>
             Done

@@ -47,6 +47,87 @@
       padding: 0 4px;
       line-height: 50px;
     }
+    .new {
+      cursor: pointer;
+      font-size: 14px;
+      color: #000000;
+      padding: 0 4px;
+      top: 0;
+      left: 0;
+      padding: 90 0px;
+      justify-content: center;
+      width: 48px;
+      height: 50px;
+      align-items: center;
+      .new_on {
+        width: 166.09px;
+        height: 144px;
+        background-color: #fff;
+        border-radius: 0 0 6px 6px;
+        font-size: 14px;
+        border-top: 1px solid #e9f2f9;
+        z-index: 100;
+        // position: fixed;
+        right: 100px;
+        margin-top: 10px;
+
+        .New {
+          text-align: left;
+          display: block;
+          line-height: 36px;
+          padding: 0 80px 0 20px;
+          margin: 0;
+          border-radius: 0;
+          border: none;
+          position: relative;
+          color: #aaa;
+          text-decoration: none;
+        }
+
+        .Trendy {
+          text-align: left;
+          display: block;
+          line-height: 36px;
+          padding: 0 80px 0 20px;
+          margin: 0;
+          border-radius: 0;
+          border: none;
+          position: relative;
+          color: #000;
+          text-decoration: none;
+        }
+
+        .Popular {
+          text-align: left;
+          display: block;
+          line-height: 36px;
+          padding: 0 80px 0 20px;
+          margin: 0;
+          border-radius: 0;
+          border: none;
+          position: relative;
+          color: #000;
+          text-decoration: none;
+        }
+
+        .Random {
+          text-align: left;
+          display: block;
+          line-height: 36px;
+          padding: 0 80px 0 20px;
+          margin: 0;
+          border-radius: 0;
+          border: none;
+          position: relative;
+          color: #000;
+          text-decoration: none;
+          border-top: gray;
+        }
+      }
+      .new_off {
+        display: none;
+      }
+    }
   }
 
   .dot {
@@ -63,7 +144,7 @@
 
     .dot_on {
       width: 166.09px;
-      height: 146px;
+      height: 218px;
       background-color: #fff;
       border-radius: 0 0 6px 6px;
       font-size: 14px;
@@ -127,6 +208,18 @@
       }
 
       .Instargram {
+        text-align: left;
+        display: block;
+        line-height: 36px;
+        padding: 0 80px 0 20px;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        position: relative;
+        color: #000;
+        text-decoration: none;
+      }
+      .sign_in {
         text-align: left;
         display: block;
         line-height: 36px;
