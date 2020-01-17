@@ -42,26 +42,32 @@
         padding: 0;
         position: absolute;
         top: 0;
-        border: none;
+
+        // border: none;
         &::-webkit-color-swatch-wrapper {
           padding: 0;
         }
+
         &::-webkit-color-swatch {
           border: none;
         }
       }
+
       .first {
         height: 400px;
         border-radius: 20px 20px 4px 4px;
       }
+
       .second {
         height: 340px;
         border-radius: 20px 20px 0 0;
       }
+
       .third {
         height: 268px;
         border-radius: 20px 20px 0 0;
       }
+
       .fourth {
         height: 164px;
         border-radius: 4px 4px 0 0;
