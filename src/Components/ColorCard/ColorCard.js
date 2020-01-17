@@ -17,9 +17,10 @@ class ColorCard extends React.Component {
         : parseInt(e.target.innerText) + 1
     });
   };
+
   render() {
-    console.log("ddd", this.state.number);
-    console.log(this.props.likesNum);
+    // console.log("ddd", this.state.number);
+    // console.log(this.props.likesNum);
     const blueHeart =
       "https://colorhunt.co/img/color-hunt-palettes-icon-heart-blue.png";
     const redHeart =

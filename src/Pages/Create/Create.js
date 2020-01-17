@@ -29,7 +29,9 @@ class Create extends Component {
             Create a Color Palette!
           </h1>
           <div className="box">
-            <input type="color" className="first" value="#aaaaaa" />
+            <form>
+              <input type="color" className="first" value="#aaaaaa" />
+            </form>
             <input type="color" className="second" value="#bbbbbb" />
             <input type="color" className="third" value="#cccccc" />
             <input type="color" className="fourth" value="#dddddd" />
