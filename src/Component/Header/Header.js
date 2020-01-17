@@ -27,11 +27,11 @@ class Header extends Component {
     });
   };
   pagemove_signin = () => {
-    this.props.history.push("/signin");
+    this.props.history.push("/");
   };
 
   pagemove_main = () => {
-    this.props.history.push("/");
+    this.props.history.push("/main");
   };
 
   pagemove_create = () => {

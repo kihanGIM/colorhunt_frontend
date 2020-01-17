@@ -24,16 +24,24 @@ class Signin extends React.Component {
     });
   };
 
-  errorCheck = () => {
-    this.state.email.length > 5
-      ? alert("Welcome Color Hunt")
-      : alert("5글자 이상 입력해주세요");
-    return;
+  // errorCheck = () => {
+  //   this.state.email.length > 5
+  //     ? alert("Welcome Color Hunt")
+  //     : alert("5글자 이상 입력해주세요");
+  //   return;
+  // };
+
+  signInSuccess = () => {
+    alert("Welcome to Color Hunt!!");
+    this.props.history.push("/main");
   };
 
-  handleSignin = e => {
-    this.errorCheck();
-    this.props.history.push("/");
+  handleSignin = () => {
+    if (this.state.email.length > 5) {
+      this.signInSuccess();
+    } else {
+      alert("5글자 이상 입력해주세요");
+    }
   };
 
   render() {

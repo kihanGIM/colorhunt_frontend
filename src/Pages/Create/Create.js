@@ -18,6 +18,7 @@ class Create extends Component {
     this.setState({
       colorChange: !this.state.colorChange
     });
+    alert("저장되었습니다.");
   };
 
   render() {
@@ -29,12 +30,10 @@ class Create extends Component {
             Create a Color Palette!
           </h1>
           <div className="box">
-            <form>
-              <input type="color" className="first" value="#aaaaaa" />
-            </form>
-            <input type="color" className="second" value="#bbbbbb" />
-            <input type="color" className="third" value="#cccccc" />
-            <input type="color" className="fourth" value="#009900" />
+            <input type="color" className="first" />
+            <input type="color" className="second" />
+            <input type="color" className="third" />
+            <input type="color" className="fourth" />
           </div>
           <button className="buttonup" onClick={this.handleClick}>
             Done
