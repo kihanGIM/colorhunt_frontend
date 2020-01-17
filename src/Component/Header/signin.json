@@ -1,9 +1,0 @@
-
-
-
-obj = {
-    email: ""
-    password:""
-}
-
-export default Obj ;
