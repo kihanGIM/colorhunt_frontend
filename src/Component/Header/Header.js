@@ -7,7 +7,10 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dot: false
+      dot: false,
+      email: "",
+      pw: "",
+      new: false
     };
   }
 
@@ -18,6 +21,11 @@ class Header extends Component {
     console.log(this.state.dot);
   };
 
+  NewhandleClick = () => {
+    this.setState({
+      new: !this.state.new
+    });
+  };
   pagemove_signin = () => {
     this.props.history.push("/signin");
   };
@@ -41,23 +49,29 @@ class Header extends Component {
           <div className="logo" onClick={this.pagemove_main}>
             Color Hunt
           </div>
-
-          {/* <Link style={{ textDecoration: "none", color: "white" }} to="/">
-            <a href="https://colorhunt.co/" className="logo">
-              Color Hunt
-              <img className="hat" src={logo} alt="logo" />
-            </a>
-          </Link> */}
-
           <div className="createtext" onClick={this.pagemove_create}>
             create
           </div>
-
-          {/* <Link style={{ textDecoration: "none", color: "white" }} to="/create">
-            <a href="https://colorhunt.co/create" className="createtext">
-              Create
-            </a>
-          </Link> */}
+          <div className="new" onClick={this.NewhandleClick}>
+            New
+            <div className={this.state.new ? "new_on" : "new_off"}>
+              <a href="https://colorhunt.co/palettes" className="New">
+                New
+              </a>
+              <a href="https://colorhunt.co/palettes/trendy" className="Trendy">
+                Trendy
+              </a>
+              <a
+                href="https://colorhunt.co/palettes/popular"
+                className="Popular"
+              >
+                Popular
+              </a>
+              <a href="https://colorhunt.co/palettes/random" className="Random">
+                Random
+              </a>
+            </div>
+          </div>
         </div>
         <div className="dot" onClick={this.dothandleClick}>
           …
@@ -80,6 +94,9 @@ class Header extends Component {
             >
               Instargram
             </a>
+            <div className="sign_in" onClick={this.pagemove_signin}>
+              Sign in
+            </div>
           </div>
         </div>
       </div>
