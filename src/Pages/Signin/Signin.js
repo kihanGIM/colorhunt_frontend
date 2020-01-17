@@ -1,19 +1,16 @@
 import React from "react";
 import "./Signin.scss";
-import Header from "../../../Component/Header/Header";
-import video from "../../../Videos/CHI.mov";
-// import image from "../../../Images/ico_account.png";
+import Header from "../../Component/Header/Header";
+import video from "../../Videos/CHI.mov";
+import { withRouter } from "react-router-dom";
 
 class Signin extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: ""
-    };
-  }
+  state = {
+    email: "",
+    password: ""
+  };
 
-  inputemail = e => {
+  handleEmail = e => {
     console.log(e.target.value);
     this.setState({
       email: e.target.value
@@ -27,13 +24,20 @@ class Signin extends React.Component {
     });
   };
 
-  handleSignin = e => {
+  errorCheck = () => {
     this.state.email.length > 5
       ? alert("Welcome Color Hunt")
       : alert("5글자 이상 입력해주세요");
+    return;
+  };
+
+  handleSignin = e => {
+    this.errorCheck();
+    this.props.history.push("/");
   };
 
   render() {
+    console.log(this.state.email);
     return (
       <div>
         <Header />
@@ -77,7 +81,7 @@ class Signin extends React.Component {
               <div className="signinMain">
                 <div className="Field">
                   <input
-                    onChange={this.inputemail}
+                    onChange={this.handleEmail}
                     className="noBorder"
                     type="text"
                     placeholder="카카오계정(이메일 또는 전호번호)"
@@ -118,4 +122,4 @@ class Signin extends React.Component {
     );
   }
 }
-export default Signin;
+export default withRouter(Signin);
