@@ -1,6 +1,6 @@
 import React from "react";
 import "./Signin.scss";
-import Header from "../../../Component/Header/Header";
+import Header from "../../Component/Header/Header";
 import video from "../../../Videos/CHI.mov";
 // import image from "../../../Images/ico_account.png";
 
