@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./Pages/Main/Main";
-import Signin from "./Pages/Main/Signin/Signin";
+import Signin from "./Pages/Signin/Signin";
 import Create from "./Pages/Create/Create";
 import Header from "./Component/Header/Header";
 

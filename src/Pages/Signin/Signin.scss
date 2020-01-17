@@ -6,22 +6,17 @@
     height: 428px;
     display: flex;
     justify-content: space-around;
-
-
+    padding-top: 40px;
 
     .logoBox {
       // display: flex;
       // flex-direction: column;
 
       .text {
-
-
-
         .paraGraph {
           margin: 0px;
           text-align: center;
           font-size: 30px;
-
         }
 
         .textLine {
@@ -29,7 +24,6 @@
           font-size: 16px;
           padding: 10px 0 10px 0;
         }
-
       }
 
       .leftLogo {
@@ -41,9 +35,7 @@
           width: 200px;
           height: 200px;
           position: fixed;
-
         }
-
       }
     }
 
@@ -65,7 +57,6 @@
           height: 30px;
           padding-left: 5px;
         }
-
       }
 
       .signinMain {
@@ -76,15 +67,11 @@
           width: 100%;
           border-bottom: 2px solid lightgrey;
 
-
-
           .noBorder {
             border: none;
             width: 100%;
             font-size: 15px;
             color: #adadad;
-
-
           }
         }
 
@@ -95,13 +82,11 @@
           .radioButton {
             width: 20px;
             height: 21px;
-            background-image: url("../../../Images/ico_account.png");
+            background-image: url("../../Images/ico_account.png");
             background-position: -30px -29px;
             background-size: 200px 220px;
             padding-right: 10px;
-
           }
-
 
           .keepLogin {
             font-size: 15px;
@@ -116,8 +101,6 @@
           background-color: #ffe500;
           margin-top: 40px;
           font-size: 15px;
-
-
         }
       }
 
@@ -129,12 +112,11 @@
         width: 338px;
         font-size: 12px;
 
-
-        .signup {}
+        .signup {
+        }
 
         .bottomRight {
           display: inline-flex;
-
 
           .socialAccount {
             padding-right: 5px;
@@ -145,8 +127,6 @@
             padding-left: 5px;
           }
         }
-
-
       }
     }
   }

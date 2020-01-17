@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../Images/color-hunt-palettes-logo.png";
+// import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 class Header extends Component {
