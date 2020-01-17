@@ -37,28 +37,6 @@ class Header extends Component {
     this.props.history.push("/create");
   };
 
-  //   fetch("", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       email: this.state.email ,
-  //       password: this.state.pw,
-  //     })
-  //   })
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       console.log(res);
-  //       if (res.message === "SUCCESS") {
-  //         console.log("ok");
-  //         this.props.history.push("/signin");
-  //       } else {
-  //         console.log("no");
-  //       }
-  //     });
-  // };
-
   render() {
     return (
       <div className="header">
